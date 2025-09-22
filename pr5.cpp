@@ -64,11 +64,12 @@ void task_9(){
 	std::cout << "a / b" << static_cast<double>(a / b) << std::endl;
 }
 
-void task_10(){
-	int num;
-	std::cout << "Enter fractional number: ";
-	int fractional;
-	std::cout << "" << static_cast<int>(fractional);
+void task_10() {
+    double fractional;
+    std::cout << "Enter fractional number: ";
+    std::cin >> fractional;  
+    int integer_part = static_cast<int>(fractional); 
+    std::cout << "Integer part: " << integer_part << std::endl;
 }
 
 int main(){
