@@ -20,12 +20,9 @@ void task_3(){
 
 void task_4(){
 	std::cout << "Enter grade from 1 to 5: ";
-    int grade; 
-    std::cin >> grade;
-	if(grade <=5){
-		std::cout << "Grade: " << grade << std::endl;
-	} else{
-		std::cout << "Enter grade from 1 to 5: ";
+	int grade = 0;
+	std::cin >> grade;
+	std::cout << "Symbol: " << static_cast<char>(grade + 48) << std::endl;
 	}
     
 }
