@@ -41,6 +41,7 @@ void task_3(){
 void task_4(){
 	std::cout << "Enter grade from 1 to 5: ";
 	int grade;
+  std::cin >> grade;
   if(grade <= 2 && grade >=1){
     std::cout << "Unsatisfactory" << std::endl;
   } else if(grade <= 5 && grade >=3){
@@ -99,6 +100,7 @@ void task_7(){
 void task_8(){
 	std::cout << "Enter number: ";
 	int a;
+  std::cin >> a;
   if(a >= 10 && a <= 20){
     std::cout << "Belongs to the interval [10, 20]" << std::endl;
   } else {
@@ -109,6 +111,7 @@ void task_8(){
 void task_9(){
 	std::cout << "Enter the month number: ";
 	int a;
+  std::cin >> a;
   if(a == 12 || a == 1 || a == 2){
     std::cout << "It's winter!" << std::endl;
   } if(3 <= a >=5){
@@ -121,7 +124,27 @@ void task_9(){
 }
 
 void task_10(){
-	
+	std::cout << "Enter the three-digit number: ";
+	int a;
+  std::cin >> a;
+  if(a < 100 || a > 999){
+    std::cout << "Enter the three-digit number: " << std::endl;
+    return;
+  }
+
+  int orig = a;
+  int b = 0;
+
+  while (a != 0){
+    int num = a % 10;
+    b = b * 10 + num;
+    a /=10;
+  }
+  if(orig == b){
+    std::cout << "The number is symmetrical" << std::endl;
+  } else{
+    std::cout << "The number is not symmetrical" << std::endl;
+  }
 }
 
 int main(){
