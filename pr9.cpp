@@ -37,7 +37,22 @@ void task_6(){
 }
 
 void task_7(){
-	
+	std::cout << "Enter side 1: ";
+	int a;
+	std::cin >> a;
+  std::cout << "Enter side 2: ";
+	int b;
+	std::cin >> b;
+  std::cout << "Enter side 3: ";
+	int c;
+	std::cin >> c;
+  if(a == b && b == c){
+    std::cout << "The triangle is equilateral" << std::endl;
+  } else if(a == b || a == c || b == c) {
+    std::cout << "Isosceles triangle" << std::endl;
+  } else {
+    std::cout << "Scalene triangle" << std::endl;
+  }
 }
 
 void task_8(){
