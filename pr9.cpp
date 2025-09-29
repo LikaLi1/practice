@@ -56,7 +56,18 @@ void task_7(){
 }
 
 void task_8(){
-	
+
+  std::cout << "Enter weight and height: ";
+  int weight;
+  int height;
+  std::cin >> weight >> height;
+
+	std::cout << "Enter x: ";
+	int x;
+	std::cin >> x;
+  std::cout << "Enter y: ";
+	int y;
+	std::cin >> y;
 }
 
 void task_9(){
