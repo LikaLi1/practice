@@ -19,13 +19,13 @@ ax^2 + bx + c = 0
     std::cout << "You need to calculate the value of x in the equation: ax^2 + bx + c = 0" << std::endl;
     
     std::cout << "Enter number: ";
-	int a;
+	double a;
     std::cin >> a;
 	std::cout << "Enter number: ";
-	int b;
+	double b;
     std::cin >> b;
     std::cout << "Enter number: ";
-	int c;
+	double c;
     std::cin >> c;
 
     if(a == 0){
