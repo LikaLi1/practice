@@ -38,7 +38,8 @@ ax^2 + bx + c = 0
 
     double D = pow(b, 2) - 4 * a * c;
     if(D > 0){
-        
+        double sqrt_D = sqrt(D);
+        std::cout << "" << << std::endl;
     }
 
 }
