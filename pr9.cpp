@@ -19,13 +19,43 @@ void task_2(){
 
 void task_3(){
 	std::cout << "Enter password: ";
-	int pass;
+	std::string pass;
 	std::cin >> pass;
+    if (pass.length() < 8) {
+        std::cout << "The password must be at least 8 characters" << std::endl;
+        return;
+    
+    bool num = false;
+    for () {
+        if () {
+            num = true;
+            break;
+        }
+    }
 
+    if (num) {
+        std::cout << "Password verified!" << std::endl;
+    } else {
+        std::cout << "The password must contain at least one number" << std::endl;
+    }
+}
 }
 
 void task_4(){
-	
+	std::cout << "Enter side 1: ";
+	int a;
+	std::cin >> a;
+    std::cout << "Enter side 2: ";
+	int b;
+	std::cin >> b;
+    std::cout << "Enter side 3: ";
+	int c;
+	std::cin >> c;
+    if(a + b > c || a + c > b || b + c > a){
+        std::cout << "The triangle exists" << std::endl;
+    } else {
+        std::cout << "Triangle doesn't exist" << std::endl;
+    }
 }
 
 void task_5(){
@@ -33,7 +63,29 @@ void task_5(){
 }
 
 void task_6(){
-	
+	std::cout << "Enter first number: ";
+	int a;
+	std::cin >> a;
+    std::cout << "Enter second number: ";
+	int b;
+	std::cin >> b;
+    std::cout << "Enter symbol(+, -, *, /): ";
+    char sym;
+    std::cin >> sym;
+
+    if(sym == '+'){
+        std::cout << "a + b = " << a + b << std::endl;
+    } else if(sym == '-'){
+        std::cout << "a - b = " << a - b << std::endl;
+    } else if(sym == '*'){
+        std::cout << "a * b = " << a * b << std::endl;
+    }else if(sym == '/'){
+        std::cout << "a / b = " << a / b << std::endl;
+    } else if(sym == '/' && a == 0 && b == 0){
+        std::cout << "Error! You can't divide by 0" << std::endl;
+    } else {
+        std::cout << "Invalid operator!" << std::endl;
+    }
 }
 
 void task_7(){
@@ -57,17 +109,18 @@ void task_7(){
 
 void task_8(){
 
-  std::cout << "Enter weight and height: ";
-  int weight;
-  int height;
-  std::cin >> weight >> height;
+    std::cout << "Enter weight and height: ";
+    int weight;
+    int height;
+    std::cin >> weight >> height;
 
 	std::cout << "Enter x: ";
 	int x;
 	std::cin >> x;
-  std::cout << "Enter y: ";
+    std::cout << "Enter y: ";
 	int y;
 	std::cin >> y;
+
 }
 
 void task_9(){
