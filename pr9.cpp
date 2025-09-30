@@ -13,10 +13,34 @@ void task_1(){
 }
 
 void task_2(){
+
+ax^2 + bx + c = 0
+ 
+    std::cout << "You need to calculate the value of x in the equation: ax^2 + bx + c = 0" << std::endl;
+    
     std::cout << "Enter number: ";
 	int a;
-    
-	
+    std::cin >> a;
+	std::cout << "Enter number: ";
+	int b;
+    std::cin >> b;
+    std::cout << "Enter number: ";
+	int c;
+    std::cin >> c;
+
+    if(a == 0){
+        std::cout << "Since a = 0, the equation takes the form: bx + c = 0" << std::endl;
+    } else if(b == 0){
+        std::cout << "Since b = 0, the equation takes the form: ax^2 + c = 0" << std::endl;
+    } else if(c == 0){
+        std::cout << "Since c = 0, the equation takes the form: ax^2 + bx = 0" << std::endl;
+    }
+
+    double D = pow(b, 2) - 4 * a * c;
+    if(D > 0){
+        
+    }
+
 }
 
 void task_3(){
@@ -36,7 +60,6 @@ void task_3(){
             break;
         }
     }
-
     if(num){
         std::cout << "Password verified!" << std::endl;
     } else{
