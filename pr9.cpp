@@ -21,25 +21,27 @@ void task_3(){
 	std::cout << "Enter password: ";
 	std::string pass;
 	std::cin >> pass;
+
     if (pass.length() < 8) {
         std::cout << "The password must be at least 8 characters" << std::endl;
         return;
-    
+    }
+
     bool num = false;
-    for () {
-        if () {
+    for(){
+        if(){
             num = true;
             break;
         }
     }
 
-    if (num) {
+    if(num){
         std::cout << "Password verified!" << std::endl;
-    } else {
+    } else{
         std::cout << "The password must contain at least one number" << std::endl;
     }
 }
-}
+
 
 void task_4(){
 	std::cout << "Enter side 1: ";
