@@ -59,7 +59,21 @@ void task_4(){
 }
 
 void task_5(){
-	
+	std::cout << "Enter side 1: ";
+	int a;
+	std::cin >> a;
+    std::cout << "Enter side 2: ";
+	int b;
+	std::cin >> b;
+    std::cout << "Enter side 3: ";
+	int c;
+	std::cin >> c;
+
+    if(pow(a, 2) + pow(b, 2) == pow(c, 2)){
+        std::cout << "The triangle is right-angled" << std::endl;
+    } else {
+        std::cout << "The triangle is not a right triangle" << std::endl;
+    }
 }
 
 void task_6(){
@@ -155,7 +169,23 @@ void task_9(){
 }
 
 void task_10(){
-	
+    std::cout << "Enter year: ";
+    int year;
+    std::cin >> year;
+
+    bool leap = false;
+
+    if((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)){
+        leap = true;
+    }
+
+    if(leap){
+        std::cout << "The year is a leap year";
+        if(year % 4 == 0){
+            std::cout << "This is the year of the Olympic games" << std::endl;
+        } }else{
+        std::cout << "The year is not a leap year" << std::endl;
+        }
 }
 
 int main(){
