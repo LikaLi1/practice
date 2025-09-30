@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 void task_1(){
 	std::cout << "Enter number: ";
@@ -12,8 +13,9 @@ void task_1(){
 }
 
 void task_2(){
-  std::cout << "Enter number: ";
+    std::cout << "Enter number: ";
 	int a;
+    
 	
 }
 
@@ -28,8 +30,8 @@ void task_3(){
     }
 
     bool num = false;
-    for(){
-        if(){
+    for(char a : pass){
+        if(a >= '0' && a <= '9'){
             num = true;
             break;
         }
