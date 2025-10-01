@@ -1,21 +1,19 @@
 #include <iostream>
 #include <string>
 
-void task_1(){
-	std::cout << "Enter number: ";
-	int a;
-	std::cin >> a;
-	 if(a >= 0 && a % 10){
-		std::cout << "Your number is positive and double digit" << std::endl;
-	} else {
-		std::cout << "Your number is not positive" << std::endl;
-	}
+void task_1() {
+    std::cout << "Enter number: ";
+    int a;
+    std::cin >> a;
+
+    if (a >= 10 && a <= 99) {
+        std::cout << "Your number is positive and double digit" << std::endl;
+    } else {
+        std::cout << "Your number is not positive and double digit" << std::endl;
+    }
 }
 
 void task_2(){
-
-ax^2 + bx + c = 0
- 
     std::cout << "You need to calculate the value of x in the equation: ax^2 + bx + c = 0" << std::endl;
     
     std::cout << "Enter number: ";
@@ -37,11 +35,22 @@ ax^2 + bx + c = 0
     }
 
     double D = pow(b, 2) - 4 * a * c;
+    std::cout << "D = " << D << std::endl;
     if(D > 0){
         double sqrt_D = sqrt(D);
-        std::cout << "" << << std::endl;
+        std::cout << "D > 0 " << std::endl;
+        std::cout << "D = " << sqrt_D << std::endl;
+        double x1 = (-b + sqrt_D) / (2 * a);
+        double x2 = (-b - sqrt_D) / (2 * a); 
+        std::cout << "x1 = " << x1 << std::endl;
+        std::cout << "x2 = " << x2 << std::endl;
+    } else if(D == 0){
+        std::cout << "D = 0 " << std::endl;
+        double x3 = - b / (2 * a);
+        std::cout << "x3 = " << x3 << std::endl;
+    } else if(D < 0){
+        std::cout << "Your D < 0 that no roots" << std::endl;
     }
-
 }
 
 void task_3(){
@@ -150,19 +159,60 @@ void task_7(){
 }
 
 void task_8(){
+    std::cout << "Enter x: ";
+    int x;
+    std::cin >> x;
 
-    std::cout << "Enter weight and height: ";
-    int weight;
-    int height;
-    std::cin >> weight >> height;
-
-	std::cout << "Enter x: ";
-	int x;
-	std::cin >> x;
     std::cout << "Enter y: ";
-	int y;
-	std::cin >> y;
+    int y;
+    std::cin >> y;
 
+    std::cout << "Enter the coordinates of the first corner of the rectangle x1: ";
+    int x1;
+    std::cin >> x1;
+    std::cout << "Enter the coordinates of the first corner of the rectangle y1: ";
+    int y1;
+    std::cin >> y1;
+    std::cout << "Enter the coordinates of the second corner x2: ";
+    int x2;
+    std::cin >> x2;
+    std::cout << "Enter the coordinates of the second corner y2: ";
+    int y2;
+    std::cin >> y2;
+
+    double minX;
+    if(x1 < x2){
+        minX = x1;
+    } else {
+        minX = x2;
+    }
+
+    double maxX;
+    if(x1 > x2){
+        maxX = x1;
+    } else {
+        maxX = x2;
+    }
+
+    double minY;
+    if(y1 < y2){
+        minY = y1;
+    } else {
+        minY = y2;
+    }
+
+    double maxY;
+    if(y1 > y2){
+        maxY = y1;
+    } else {
+        maxY = y2;
+    }
+
+    if (x >= minX && x <= maxX && y >= minY && y <= maxY) {
+        std::cout << "Point (" << x << ", " << y << ") included into a rectangle" << std::endl;
+    } else {
+        std::cout << "Point (" << x << ", " << y << ") not included in the rectangle" << std::endl;
+    }
 }
 
 void task_9(){
