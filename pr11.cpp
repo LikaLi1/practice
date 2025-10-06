@@ -1,6 +1,7 @@
 #include <iostream>
 
 
+
 void task_1(){
   std::cout << "Enter number: ";
   int num;
@@ -65,7 +66,16 @@ void task_6(){
 
 void task_7(){
   std::cout << "Game! Guess the number" << std::endl;
-  std::
+
+  std::cout << "The computer guessed a number" << std::endl;
+  int com_num = 4;
+
+  std::cout << "Enter estimated number: ";
+  int num;
+  std::cin >> num; 
+
+  std::string guess = (com_num > num) "NOOOOO! Less!" : (com_num == num) "You guessed it!" : "NOOOOO! More!"; 
+  std::cout << guess << std::endl;
 }
 
 
