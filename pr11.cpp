@@ -17,11 +17,9 @@ void task_2(){
   std::cout << "Enter first number: ";
   int b;
   std::cin >> b;
-  
-  int min_num = (a < b) ? a : b;
+
   int max_num = (a > b) ? a : b;
 
-  std::cout << "Minimum: " << min_num << std::endl;
   std::cout << "Maximum: " << max_num << std::endl;
 }
 
