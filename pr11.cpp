@@ -1,6 +1,5 @@
 #include <iostream>
-
-
+#include <cctype>
 
 void task_1(){
   std::cout << "Enter number: ";
@@ -51,7 +50,19 @@ void task_5(){
   char sym;
   std::cin >> sym;
 
+  switch (sym)
+  {
+  case 'a'...'z':
+    std::cout << "Your symbol is a small letter" << std::endl;
+    break;
+  
+  default:
+  std::cout << "Error" << std::endl;
+    break;
+  }
 
+  char big_sym = (std::islower(sym)) ? std::toupper(sym) : sym;
+  std::cout << "Your meaning is " << big_sym << std::endl
 }
 
 void task_6(){
