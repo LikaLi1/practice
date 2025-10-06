@@ -64,7 +64,8 @@ void task_6(){
 
 
 void task_7(){
-
+  std::cout << "Game! Guess the number" << std::endl;
+  std::
 }
 
 
