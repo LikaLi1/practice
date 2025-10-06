@@ -88,7 +88,9 @@ void task_7(){
   int num;
   std::cin >> num; 
 
-  std::string guess = (com_num > num) "NOOOOO! Less!" : (com_num == num) "You guessed it!" : "NOOOOO! More!"; 
+  std::string guess = (com_num > num) ? "NOOOOO! Less!" : 
+                      (com_num == num) ? "You guessed it!" : 
+                      "NOOOOO! More!"; 
   std::cout << guess << std::endl;
 }
 
