@@ -11,10 +11,10 @@ void task_1(){
 }
 
 void task_2(){
-  std::cout << "Enter first number: "
+  std::cout << "Enter first number: ";
   int a;
   std::cin >> a;
-  std::cout << "Enter first number: "
+  std::cout << "Enter first number: ";
   int b;
   std::cin >> b;
   
@@ -62,7 +62,7 @@ void task_5(){
   }
 
   char big_sym = (std::islower(sym)) ? std::toupper(sym) : sym;
-  std::cout << "Your meaning is " << big_sym << std::endl
+  std::cout << "Your meaning is " << big_sym << std::endl;
 }
 
 void task_6(){
@@ -70,7 +70,10 @@ void task_6(){
   int amount;
   std::cin >> amount;
 
-  std::string money = (amount % 100) ? "Multiple of 100" : (amount % 2 == 0) "Positive" : (amount < 50000) "Amount less than 50,000" : "Error";
+  std::string money = (amount % 100 == 0) ? "Multiple of 100" : 
+                      (amount % 2 == 0) ? "Positive" : 
+                      (amount < 50000) ? "Amount less than 50,000" : 
+                      "Error";
   std::cout << money << std::endl;
 }
 
