@@ -170,7 +170,20 @@ void task_10(){
   std::string pass;
   std::cin >> pass;
 
-
+  switch (status) {
+    case 0:
+      std::cout << "Access granted." << std::endl;
+      break;
+    case 1:
+      std::cout << "Incorrect login." << std::endl;
+      break;
+    case 2:
+      std::cout << "Incorrect password." << std::endl;
+      break;
+    default:
+      std::cout << "Unknown error." << std::endl;
+      break;
+    }
 }
 
 int main(){
