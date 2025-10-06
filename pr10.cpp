@@ -264,15 +264,15 @@ void task_8(){
   
   switch (a)
   {
-  case '1'...'2':
+  case 1:
+  case 2:
+  case 12:
     std::cout << "Winter" << std::endl;
     break;
 
-  case '12':
-    std::cout << "Winter" << std::endl;
-    break;
-
-  case '3'...'5':
+  case 3:
+  case 4:
+  case 5:
     std::cout << "Sprin" << std::endl;
     break;
 
@@ -280,7 +280,9 @@ void task_8(){
     std::cout << "Summer" << std::endl;
     break;
 
-  case '9'...'11':
+  case 9:
+  case 10:
+  case 11:
     std::cout << "Autumn" << std::endl;
     break;
 
