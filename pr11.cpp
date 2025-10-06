@@ -6,7 +6,7 @@ void task_1(){
   int num;
   std::cin >> num;
  
-  std::string result = num % 2 == 0 ? "Even" : "Not even";
+  std::string result = (num % 2 == 0) ? "Even" : "Not even";
   std::cout << result << std::endl;
 }
 
@@ -40,7 +40,7 @@ void task_4(){
   int num;
   std::cin >> num;
 
-  std::string sign = (num > 0) ? "положительное" : (num == 0) ? "ноль" : "отрицательное";
+  std::string sign = (num > 0) ? "Positive" : (num == 0) ? "Zero" : "Negative";
   std::cout << sign << std::endl;
 }
 
@@ -50,11 +50,16 @@ void task_5(){
   char sym;
   std::cin >> sym;
 
-  
+
 }
 
 void task_6(){
+  std::cout << "Enter amount: ";
+  int amount;
+  std::cin >> amount;
 
+  std::string money = (amount % 100) ? "Multiple of 100" : (amount % 2 == 0) "Positive" : (amount < 50000) "Amount less than 50,000" : "Error";
+  std::cout << money << std::endl;
 }
 
 
@@ -75,6 +80,13 @@ void task_9(){
 
 
 void task_10(){
+  std::cout << "";
+  std::string log;
+  std::cin >> log;
+  std::cout << "";
+  std::string pass;
+  std::cin >> pass;
+
 
 }
 
