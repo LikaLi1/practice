@@ -163,12 +163,15 @@ void task_9(){
 
 
 void task_10(){
-  std::cout << "";
+  std::cout << "Enter login: ";
   std::string log;
   std::cin >> log;
-  std::cout << "";
+  std::cout << "Enter password: ";
   std::string pass;
   std::cin >> pass;
+
+  int status = (login == correctLogin && password == correctPassword) ? 0 :
+                (login != correctLogin) ? 1 : 2; 
 
   switch (status) {
     case 0:
