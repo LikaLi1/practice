@@ -68,8 +68,7 @@ void task_6(){
   int amount;
   std::cin >> amount;
 
-  std::string money = (amount % 100 == 0) ? "Multiple of 100" : 
-                      (amount % 2 == 0) ? "Positive" : 
+  std::string money = (amount % 100 == 0) && (amount > 0) ? "Multiple of 100 and positive" : 
                       (amount < 50000) ? "Amount less than 50,000" : 
                       "Error";
   std::cout << money << std::endl;
