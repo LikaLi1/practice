@@ -93,14 +93,73 @@ void task_7(){
 
 
 void task_8(){
+  std::cout << "Enter city code: ";
+    int code;
+    std::cin >> code;
+
+    std::cout << "Enter call duration (minutes): ";
+    int time;
+    std::cin >> time;
+
+    double cost_per_minute;
+
+    switch (code) {
+        case 1:
+            cost_per_minute = 5.0;
+            break;
+        case 2:
+            cost_per_minute = 4.0;
+            break;
+        case 3:
+            cost_per_minute = 3.0;
+            break;
+        default:
+            std::cout << "Invalid city code." << std::endl;
+            return;
+    }
+
+    double total_cost = cost_per_minute * time;
+
+    std::cout << "Total call cost: " << total_cost << " rubles" << std::endl;
 
 }
 
 
 void task_9(){
+  double a, b, c;
+  std::cout << "Enter lengths of three segments: " << std::endl;
+  std::cin >> a >> b >> c;
 
+    if (a + b > c && a + c > b && b + c > a) {
+
+        int type = 0; 
+
+        if (a == b && b == c) {
+            type = 1; 
+        } else if (a == b || b == c || a == c) {
+            type = 2; 
+        } else {
+            type = 3; 
+        }
+
+    switch (type){
+      case 1:
+      td::cout << "The triangle is equilateral." << std::endl;
+        break;
+      case 2:
+        std::cout << "The triangle is isosceles." << std::endl;
+        break;
+      case 3:
+        std::cout << "The triangle is scalene." << std::endl;
+        break;
+      default:
+        std::cout << "Unknown type." << std::endl;
+        break;
+      }
+    } else {
+        std::cout << "It's not possible to form a triangle with these segments." << std::endl;
+    }
 }
-
 
 
 void task_10(){
