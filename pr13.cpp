@@ -182,7 +182,8 @@ int main(){
             std::wcout<< L"Ошибка \n\n";
             break;
         }
-    
+
+
         enum Suit {spades = 0, clubs = 1, diamonds = 2, hearts = 3};
 
         std::wcout << L"Введите масть карты (0 - пики, 1 - трефы, 2 - бубны, 3 - черви): ";
@@ -293,6 +294,8 @@ int main(){
 
             std::wcout << rankName << L" " << suitName << std::endl;
 
+    std::wcout << L"Введи трехзначное число: ";
+    
 
     std::wcout<<L"ДОБРО ПОЖАЛОВАТЬ В C++\n\n";
     return 0;
