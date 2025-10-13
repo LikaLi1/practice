@@ -18,6 +18,7 @@ int main(){
     std::wcout.imbue(std::local("en_US.UTF-8"));
     std::wcin.imbue(std::local("en_US.UTF-8"));
 #endif
+    /*
     std::wcout << L"Введите номер недели: \n\n";
     int number;
     std::wcin >> number;
@@ -134,12 +135,11 @@ int main(){
             break;
         }
 
-
         std::wcout << L"Введите размер отрезка в миллиметрах: ";
         int segment;
         std::wcin >> segment;
 
-        enum SizeOn { millimeter = 0, centimeter = 1, decimeter = 2, meter = 3, kilometer = 4};
+        enum SizeOn {millimeter = 0, centimeter = 1, decimeter = 2, meter = 3, kilometer = 4};
         int sizeInput;
 
         std::wcout << L"Введите единицу измерения(0 - миллиметр; 1 - сантиметр; 2 - дециметр; 3 - метр; 4 - километр): ";
@@ -183,9 +183,117 @@ int main(){
             std::wcout<< L"Ошибка \n\n";
             break;
         }
+*/
+
+        enum Suit {spades = 0, clubs = 1, diamonds = 2, hearts = 3};
+
+        std::wcout << L"Введите масть карты (0 - пики, 1 - трефы, 2 - бубны, 3 - черви): ";
+        int suitInput;
+        std::wcin >> suitInput;
+
+        if (suitInput < 0 || suitInput > 3) {
+            std::wcout << L"Ошибка\n";
+            return 1;
+        }
+
+        Suit suit = static_cast<Suit>(suitInput);
+
+        std::wcout << L"Введите достоинство карты (2-10, 11 - валет, 12 - дама, 13 - король, 14 - туз): ";
+        int rank;
+        std::wcin >> rank;
+
+        if (rank < 2 || rank > 14) {
+            std::wcout << L"Ошибка\n";
+            return 1;
+        }
+
+        std::wstring suitName;
+        switch (suit) {
+        case spades:
+            suitName =  L"Пик";
+            break;
+
+        case clubs:
+            suitName = L"Треф";
+            break;
+
+        case diamonds:
+            suitName = L"Бубен";
+            break;
+
+        case hearts:
+            suitName = L"Червей";
+            break;
+
+        default:
+            std::wcout << L"Ошибка";
+            return 1;
+            break;
+        }
 
 
+        std::wstring rankName;
 
+            switch(rank) {
+            case 2:
+                rankName = L"Двойка";
+                break;
+
+            case 3:
+                rankName = L"Тройка";
+                break;
+
+            case 4:
+                rankName = L"Четверка";
+                break;
+
+            case 5:
+                rankName = L"Пятерка";
+                break;
+
+            case 6:
+                rankName = L"Шестерка";
+                break;
+
+            case 7:
+                rankName = L"Семерка";
+                break;
+
+            case 8:
+                rankName = L"Восьмерка";
+                break;
+
+            case 9:
+                rankName = L"Девятка";
+                break;
+
+            case 10:
+                rankName = L"Десятка";
+                break;
+
+            case 11:
+                rankName = L"Валет";
+                break;
+
+            case 12:
+                rankName = L"Дама";
+                break;
+
+            case 13:
+                rankName = L"Король";
+                break;
+
+            case 14:
+                rankName = L"Туз";
+                break;
+
+            default:
+                std::wcout << L"Ошибка";
+                return 1;
+                break;
+            }
+
+            std::wcout << rankName << L" " << suitName << std::endl;
 
 
     std::wcout<<L"ДОБРО ПОЖАЛОВАТЬ В C++\n\n";
