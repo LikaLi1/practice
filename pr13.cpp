@@ -18,7 +18,6 @@ int main(){
     std::wcout.imbue(std::local("en_US.UTF-8"));
     std::wcin.imbue(std::local("en_US.UTF-8"));
 #endif
-    /*
     std::wcout << L"Введите номер недели: \n\n";
     int number;
     std::wcin >> number;
@@ -183,8 +182,7 @@ int main(){
             std::wcout<< L"Ошибка \n\n";
             break;
         }
-*/
-
+    
         enum Suit {spades = 0, clubs = 1, diamonds = 2, hearts = 3};
 
         std::wcout << L"Введите масть карты (0 - пики, 1 - трефы, 2 - бубны, 3 - черви): ";
