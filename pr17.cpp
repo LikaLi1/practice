@@ -19,7 +19,7 @@ int main(){
     std::wcin.imbue(std::local("en_US.UTF-8"));
 #endif
     std::wcout << L"Введите вес конфет(кг): ";
-    int weight = 10;
+    int weight = 1;
 
     while (weight > 0) {
         int num;
@@ -35,20 +35,24 @@ int main(){
         std::wcout << L"Введите свой выбор(Konti Живинка, желейные со вкусом арбуза - 0, Konti Золотая лилия - 1, Milky Way minis - 2): ";
         std::wcin >> com;
 
+        if (com < 0 || com > 2) {
+            std::wcout << L"Некорректный выбор. Попробуйте ещё раз.\n";
+            continue;
+        }
 
         Company company = static_cast<Company>(com);
 
         switch (company) {
         case watermelon:
-            std::wcout << L"Konti Живинка, желейные со вкусом арбуза за " << num << "кг стоит " << a * num;
+            std::wcout << L"Konti Живинка, желейные со вкусом арбуза за " << num << L" кг стоит " << a * num;
             break;
 
         case Golden:
-            std::wcout << L"Konti Золотая лилия за " << num << "кг стоит " << b * num;
+            std::wcout << L"Konti Золотая лилия за " << num << L" кг стоит " << b * num;
             break;
 
         case Milky:
-            std::wcout << L"Milky Way minis за " << num << "кг стоит " << c * num;
+            std::wcout << L"Milky Way minis за " << num << L" кг стоит " << c * num;
             break;
         default:
             std::wcout << L"Ошибка";
