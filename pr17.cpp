@@ -24,94 +24,11 @@ int main(){
     while (weight > 0) {
         int num;
         std::wcin >> num;
-        
+
         int a = 400;
         int  b = 500;
         int c = 900;
-        
-        int price = weight * num;
-        
-        
 
-        switch (num) {
-        case 1:
-            std::wcout << L"Вот какие варианты мы можем предложить: \n\n";
-            std::wcout << L"Цена за один кг 'Konti Живинка, желейные со вкусом арбуза' - 400 рублей\n\n";
-            std::wcout << L"Цена за один кг 'Konti Золотая лилия' - 500 рублей\n\n";
-            std::wcout << L"Цена за один кг 'Milky Way minis' - 900 рублей\n\n";
-            break;
-
-        case 2:
-            std::wcout << L"Вот какие варианты мы можем предложить: \n\n";
-            std::wcout << L"Цена за один кг 'Konti Живинка, желейные со вкусом арбуза' - 800 рублей\n\n";
-            std::wcout << L"Цена за один кг 'Konti Золотая лилия' - 1000 рублей\n\n";
-            std::wcout << L"Цена за один кг 'Milky Way minis' - 1800 рублей\n\n";
-            break;
-
-        case 3:
-            std::wcout << L"Вот какие варианты мы можем предложить: \n\n";
-            std::wcout << L"Цена за один кг 'Konti Живинка, желейные со вкусом арбуза' - 1200 рублей\n\n";
-            std::wcout << L"Цена за один кг 'Konti Золотая лилия' - 1500 рублей\n\n";
-            std::wcout << L"Цена за один кг 'Milky Way minis' - 2700 рублей\n\n";
-            break;
-
-        case 4:
-            std::wcout << L"Вот какие варианты мы можем предложить: \n\n";
-            std::wcout << L"Цена за один кг 'Konti Живинка, желейные со вкусом арбуза' - 1600 рублей\n\n";
-            std::wcout << L"Цена за один кг 'Konti Золотая лилия' - 2000 рублей\n\n";
-            std::wcout << L"Цена за один кг 'Milky Way minis' - 3600 рублей\n\n";
-            break;
-
-        case 5:
-            std::wcout << L"Вот какие варианты мы можем предложить: \n\n";
-            std::wcout << L"Цена за один кг 'Konti Живинка, желейные со вкусом арбуза' - 2000 рублей\n\n";
-            std::wcout << L"Цена за один кг 'Konti Золотая лилия' - 2500 рублей\n\n";
-            std::wcout << L"Цена за один кг 'Milky Way minis' - 4500 рублей\n\n";
-            break;
-
-        case 6:
-            std::wcout << L"Вот какие варианты мы можем предложить: \n\n";
-            std::wcout << L"Цена за один кг 'Konti Живинка, желейные со вкусом арбуза' - 2400 рублей\n\n";
-            std::wcout << L"Цена за один кг 'Konti Золотая лилия' - 3000 рублей\n\n";
-            std::wcout << L"Цена за один кг 'Milky Way minis' - 5600 рублей\n\n";
-            break;
-
-        case 7:
-            std::wcout << L"Вот какие варианты мы можем предложить: \n\n";
-            std::wcout << L"Цена за один кг 'Konti Живинка, желейные со вкусом арбуза' - 2800 рублей\n\n";
-            std::wcout << L"Цена за один кг 'Konti Золотая лилия' - 3500 рублей\n\n";
-            std::wcout << L"Цена за один кг 'Milky Way minis' - 6300 рублей\n\n";
-            break;
-
-        case 8:
-            std::wcout << L"Вот какие варианты мы можем предложить: \n\n";
-            std::wcout << L"Цена за один кг 'Konti Живинка, желейные со вкусом арбуза' - 3200 рублей\n\n";
-            std::wcout << L"Цена за один кг 'Konti Золотая лилия' - 4000 рублей\n\n";
-            std::wcout << L"Цена за один кг 'Milky Way minis' - 7200 рублей\n\n";
-            break;
-
-        case 9:
-            std::wcout << L"Вот какие варианты мы можем предложить: \n\n";
-            std::wcout << L"Цена за один кг 'Konti Живинка, желейные со вкусом арбуза' - 3600 рублей\n\n";
-            std::wcout << L"Цена за один кг 'Konti Золотая лилия' - 4500 рублей\n\n";
-            std::wcout << L"Цена за один кг 'Milky Way minis' - 8100 рублей\n\n";
-            break;
-
-        case 10:
-            std::wcout << L"Вот какие варианты мы можем предложить: \n\n";
-            std::wcout << L"Цена за один кг 'Konti Живинка, желейные со вкусом арбуза' - 4000 рублей\n\n";
-            std::wcout << L"Цена за один кг 'Konti Золотая лилия' - 5000 рублей\n\n";
-            std::wcout << L"Цена за один кг 'Milky Way minis' - 9000 рублей\n\n";
-            break;
-
-        default:
-            std::wcout << L"Ошибка";
-            break;
-        }
-
-
-
-        
         enum Company {watermelon = 0, Golden = 1, Milky = 2};
         int com;
 
@@ -120,7 +37,24 @@ int main(){
 
 
         Company company = static_cast<Company>(com);
-        
+
+        switch (company) {
+        case watermelon:
+            std::wcout << L"Konti Живинка, желейные со вкусом арбуза за " << num << "кг стоит " << a * num;
+            break;
+
+        case Golden:
+            std::wcout << L"Konti Золотая лилия за " << num << "кг стоит " << b * num;
+            break;
+
+        case Milky:
+            std::wcout << L"Milky Way minis за " << num << "кг стоит " << c * num;
+            break;
+        default:
+            std::wcout << L"Ошибка";
+            break;
+        }
+
 
     }
     return 0;
