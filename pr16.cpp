@@ -102,18 +102,6 @@ int main(){
             break;
         }
 
-
-
-
-        enum Company {watermelon = 0, Golden = 1, Milky = 2};
-        int com;
-
-        std::wcout << L"Введите свой выбор(Konti Zhivinka watermelon-flavored jelly candies - 0, Konti Golden Lily - 1, Milky Way minis - 2): ";
-        std::wcin >> com;
-
-
-        Company company = static_cast<Company>(com);
-
     }
     return 0;
 }
