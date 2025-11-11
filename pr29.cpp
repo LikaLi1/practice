@@ -14,4 +14,5 @@ int main() {
     }
 
     std::cout << "The snail crawled: " << distance << std::endl;
+    return 0;
 }
